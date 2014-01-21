@@ -79,8 +79,8 @@ function doIt(){
 			.done(function(data) {
 				
 					var link = data.split("\n\"")[1].split("\"")[0];
-					qrcode.makeCode("http://ideati.me/idea/ics/d.php?id=" +link);
-					var txt = "Scan the code on your phone or click <a href='http://ideati.me/idea/ics/d.php?id=" + link + "'>HERE</a> to download on your computer";
+					qrcode.makeCode("http://et15.x10.mx/scheduleExport/d.php?id=" +link);
+					var txt = "Scan the code on your phone or click <a href='d.php?id=" + link + "'>HERE</a> to download on your computer";
 					$("#success_info_h1").html(txt);
 					$("#course_table").remove();
 					$('#get_it').fadeOut();

@@ -53,6 +53,7 @@ function Time() {
 	this.endHr;
 	this.endMin;
 	this.day;
+	this.days;
 	this.startYr;
 	this.startMon;
 	this.startDay;
@@ -88,8 +89,9 @@ Time.prototype.getLocation = function(x) {
 	this.location = x;
 }
 Time.prototype.getDay = function(x) {
-	var dayList1Char = ['M', 'T', 'W', 'R', 'F', 'S', ''];
-	this.day = dayList1Char.indexOf(x);
+	var dayList1Char = ['M', 'T', 'W', 'R', 'F', 'S', 'U'];
+	this.day = dayList1Char.indexOf(x.charAt(0));
+	this.days = x;
 }
 // WARNING!!  getDay must be called before getDate!!!
 Time.prototype.getDate = function(x) {

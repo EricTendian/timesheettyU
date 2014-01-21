@@ -1,8 +1,24 @@
-<?php require("../../part_head.php") ?>
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<title>Schedule Exporter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
 <body>
+<!-- facebook -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- /facebook -->
 <div class="container">
-
-	<?php $nav_wire = "idea"; require("../../part_header.php") ?>
 <!-- main -->
 	<div class="row visible-xs visible-sm">
 		<div class="col-sm-12">
@@ -14,11 +30,11 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12">
-			<h1><strong>TimeSheettyU</strong> <small><em>make the schedule easy!</em></small></h1>
-			<h4>To automatically extract schedule from your CityU AIMS into your calendar Apps! <strong>AUTOMATICALLY!</strong></h4>
+			<h1><strong>OnTrack</strong> <small><em>make the schedule easy!</em></small></h1>
+			<h4>To automatically extract schedule from your MyIIT Banner Self-Service portal into your calendar apps! <strong>AUTOMATICALLY!</strong></h4>
 			<div class="well well-sm">
 				<p>
-					In CityU, everybody (almost) has a schedule, most students make a <strong>screenshot</strong> and save it into phones or set it as wallpaper.
+					At Illinois Tech, everybody (almost) has a schedule, most students make a <strong>screenshot</strong> and save it into phones or set it as wallpaper.
 					<br />
 					<em>small, ugly, always out of style.</em>
 					<br />
@@ -30,14 +46,14 @@
 					Now, you will never need to do it.
 				</h2>
 				<p class="lead">
-					Here is <strong>TimeSheettyU</strong>, making schedule into your Calendar App, <strong>AUTOMATICALLY</strong>, reminder setting, weekly detecting, extendable, and simplifying your timetable!
+					Here is <strong>OnTrack</strong>, exporting your schedule into your Calendar App, <strong>AUTOMATICALLY</strong>, reminder setting, weekly detecting, extendable, and simplifying your timetable!
 				</p>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-sm-4">
-			<h3>1. Open the "My Detail Schedule" in AIMS and see the source code; <br/><small>[<a href="javascript: howToViewSc();">don't know how to view source code?</a>]</small></h3>
+			<h3>1. Open the "My Detail Schedule" in MyIIT and see the source code; <br/><small>[<a href="javascript: howToViewSc();">don't know how to view source code?</a>]</small></h3>
 		</div>
 		<div class="col-sm-4 visible-xs">
 			<div class="row draw">
@@ -73,7 +89,7 @@
 			<div class="alert alert-warning">
 				<em>You'd better use a new calendar to store the schedule (making the choice while opening the schedule file), in case your schedule is changing and if so you can simply remove the whole calendar then create a new one.</em>
 			</div>
-			<div class="fb-like" data-href="http://ideati.me/idea/ics/" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button" data-action="like" data-show-faces="false" data-send="false"></div>
+			<div class="fb-like" data-href="http://ontrack.iit.io/" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button" data-action="like" data-show-faces="false" data-send="false"></div>
 		</div>
 	</div>
 	<hr>
@@ -98,7 +114,7 @@
 				<label for="exampleInputEmail1">Paste the source code here:</label>
 				<textarea class="form-control" rows="9" name="timetable_source" id="timetable_source" style="background: url('img/sc-placeholder.png')"></textarea>
 			</div>
-			<button onclick="doIt()" class="btn btn-default">Make Schedule Easy!</button>
+			<button onclick="doIt()" class="btn btn-default">Export my schedule!</button>
 		</div>
 		<div class="col-sm-9" id="success_info" style="display: none">
 			<p class="alert alert-success" id = "success_info_h1"></p>
@@ -121,8 +137,8 @@
 					
 				}
 				$(function(){
-					$("#notice").html("If you find any bugs of have any ideas, just inform me: <a href='mailto:landxh@gmail.com'>landxh@gmail.com</a>:-)");
-					qrcode.makeCode("mailto:landxh@gmail.com");
+					$("#notice").html("If you find any bugs or have any ideas, just email me: <a href='mailto:eric@tendian.io'>eric@tendian.io</a>");
+					qrcode.makeCode("mailto:eric@tendian.io");
 				})
 			</script>
 			
@@ -168,7 +184,6 @@
 	<script src="class.js"></script>
 	<script src="http://dystroy.org/JSON.prune/.js"></script>
 	<!-- /main -->
-	<?php require("../../part_footer.php") ?>
 </div>
 </body>
 </html>
